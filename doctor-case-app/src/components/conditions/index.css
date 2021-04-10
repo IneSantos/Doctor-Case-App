@@ -1,0 +1,9 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid black;
+}
+
+li {
+    padding: 6px;
+}

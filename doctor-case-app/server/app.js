@@ -13,6 +13,10 @@ app.use(express.urlencoded({
 const casesRoute = require('./routes/cases');
 app.use('/cases', casesRoute);
 
+const usersRoute = require('./routes/auth');
+app.use('/login', usersRoute);
+app.use('/logout', usersRoute);
+
 app.get('/', (req, res) => {
    res.status(200);
 });
@@ -23,4 +27,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useUnifiedTopology: true } ,
 )
 
 //Port to the application
-app.listen(process.env.SERVER_PORT);
+app.listen(process.env.SERVER_PORT, () => console.log(`This app is listening on port ${process.env.SERVER_PORT}`));
