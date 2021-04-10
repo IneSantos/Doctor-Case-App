@@ -23,4 +23,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useUnifiedTopology: true } ,
 )
 
 //Port to the application
-app.listen(process.env.APP_PORT);
+app.listen(process.env.SERVER_PORT);

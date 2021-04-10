@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         const cases = await Cases.find();
         res.json(cases);
     } catch(err){
-        res.json*({message: err});
+        res.json({message: err});
     }
 });
 
