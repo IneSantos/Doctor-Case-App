@@ -13,6 +13,9 @@ app.use(express.urlencoded({
 const casesRoute = require('./routes/cases');
 app.use('/cases', casesRoute);
 
+const conditionsRoute = require('./routes/conditions');
+app.use('/conditions', conditionsRoute);
+
 const usersRoute = require('./routes/auth');
 app.use('/login', usersRoute);
 app.use('/logout', usersRoute);

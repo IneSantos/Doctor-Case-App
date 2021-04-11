@@ -1,13 +1,11 @@
 import React from "react";
 import './index.css';
 
-
 const conditions = [{code:'F411', description: 'Generalized anxiety disorder' }];
 
 function Conditions () {
-
     const selectCondition = () => {
-        console.log('hey');
+        console.log('selectCondition');
     }
 
     return (
