@@ -1,4 +1,3 @@
-import React from "react";
 import './index.css';
 
 const conditions = [{code:'F411', description: 'Generalized anxiety disorder' }];
