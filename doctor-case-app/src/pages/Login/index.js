@@ -28,8 +28,8 @@ const Login = ({onSuccLogin}) => {
 
     return (
       <form onSubmit={handleSubmit}>
-        <h3>Welcome, please sign in</h3>
-        <input type="text" placeholder="enter you email" value={username}  onChange={(e) => setUsername(e.target.value)} required/> 
+        <h3>Welcome, please sign in :)</h3>
+        <input type="email" placeholder="enter you email" value={username}  onChange={(e) => setUsername(e.target.value)} required/> 
         <input type="password"  placeholder="enter password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
         <input type="submit" value="Login" />
       </form>
