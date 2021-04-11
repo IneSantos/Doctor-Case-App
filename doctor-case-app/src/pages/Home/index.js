@@ -3,10 +3,10 @@ import Nav from "../../components/nav/index.js";
 import ReviewCases from "../../components/reviewCases/index.js";
 import './index.css';
 
-const Home = () =>  (
+const Home = ({user}) =>  (
       <>
-          <Nav/>
-          <ReviewCases/>
+          <Nav user={user}/>
+          <ReviewCases user={user}/>
       </>
     );
 

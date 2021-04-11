@@ -5,7 +5,7 @@ import Case from '../../components/case/index.js';
 import Conditions from '../../components/conditions/index.js';
 import './index.css';
 
-const ReviewCases = () => {
+const ReviewCases = (user) => {
 
   const [caseIndex, setCaseIndex] = useState(0);
   const [cases, setEHRCases] = useState([]);
