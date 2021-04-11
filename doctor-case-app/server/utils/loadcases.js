@@ -9,7 +9,8 @@ const loadCases = () =>
         return Promise.all(filesP).then((files) => files.map((content, index) => ({id: index, description: content.toString()})))
       })
       .catch((err)=> {
-          return console.log('Unable to scan directory: ' + err);
+        console.log('Unable to scan directory: ' + err);
+        throw err;
       });
 
 module.exports = loadCases

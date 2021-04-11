@@ -2,9 +2,8 @@ import React from "react";
 import './index.css';
 
 function Conditions ({conditions, onSelect, selectedCode}) {
-
-    const condStyle = (code) => {return {backgroundColor: selectedCode === code ? "grey" : "none"}};
-
+    const condStyle = (code) => ({backgroundColor: selectedCode === code && "grey" });
+    
     return (
         <>
             <h3>Select Condition: </h3>

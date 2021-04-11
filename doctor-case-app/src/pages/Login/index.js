@@ -28,7 +28,7 @@ const Login = ({onSuccLogin}) => {
                     alert("Username or password does not exist");
                 }
             })
-            .catch(function (error) {
+            .catch(() => {
                 alert("Error trying to login");
             });
     }

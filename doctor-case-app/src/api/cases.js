@@ -6,6 +6,28 @@ export const getListOfCases = (authToken) =>
     axios.get(`${apiURL}/cases`, { 'headers': { 'x-access-token': authToken }})
     .then(function (response) {
         return response.data;
-    }); 
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
-    //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzFlZDkwMWQ0MGYyMGM0NGI3NTdkZCIsImlhdCI6MTYxODE2MDYyOSwiZXhwIjoxNjE4MTYwOTI5fQ.ahTAikEKG_Mxg-WxFvDLSo3kNzveWrW9AwJhzS-6aYs
+
+export const submitCaseLabel = (authToken, caseId, description, codeId, userId) => {
+    const reqBody = {
+        caseId: caseId,
+        description: description,
+        codeId: codeId,
+        userId: userId
+    }
+   return  axios.post(
+            `${apiURL}/cases`, 
+            reqBody, 
+            { 'headers': { 'x-access-token': authToken }}
+        )
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}

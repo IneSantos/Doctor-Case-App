@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const CaseSchema = mongoose.Schema({
+    id: String,
     description: {
         type: String,
         required: true
