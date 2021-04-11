@@ -5,7 +5,7 @@ import Case from '../../components/case/index.js';
 import Conditions from '../../components/conditions/index.js';
 import './index.css';
 
-const ReviewCases = (user) => {
+const ReviewCases = ({user}) => {
 
   const [caseIndex, setCaseIndex] = useState(0);
   const [cases, setEHRCases] = useState([]);
@@ -13,11 +13,11 @@ const ReviewCases = (user) => {
   const [conditions, setConditions] = useState([]);
 
   useEffect(()=> {
-     getListOfCases().then(arr => {
+     getListOfCases(user.token).then(arr => {
       setEHRCases(arr);
      });
 
-     getListOfConditions().then(arr => {
+     getListOfConditions(user.token).then(arr => {
        setConditions(arr);
      })
   }, []);

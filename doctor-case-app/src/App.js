@@ -4,7 +4,7 @@ import Home from './pages/Home/index';
 import './App.css';
 
 function App() {
-  const [userLoggedIn, setUserLoggedin] = useState({});
+  const [userLoggedIn, setUserLoggedin] = useState({user: {}});
 
   const successfulLogin = (user) => {
     setUserLoggedin(user);
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      { !userLoggedIn._id  ? <Login onSuccLogin={successfulLogin}/> : <Home user={userLoggedIn}/> }
+      { !userLoggedIn.user._id  ? <Login onSuccLogin={successfulLogin}/> : <Home user={userLoggedIn}/> }
     </div>
   );
 }

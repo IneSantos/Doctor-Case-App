@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const loadCases = require('../utils/loadcases');
+const verifyJWT = require('../utils/verifyJWT');
 
-router.get('/', async (req, res) => {
+router.get('/', verifyJWT, async (req, res) => {
     try {
         const cases = await loadCases();
         res.json(cases);

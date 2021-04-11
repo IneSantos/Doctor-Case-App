@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const loadConditions = require('../utils/loadConditions');
+const verifyJWT = require('../utils/verifyJWT');
 
-router.get('/', async (req, res) => {
+router.get('/', verifyJWT, async (req, res) => {
     try {
         const conditions = await loadConditions();
         res.json(conditions);
