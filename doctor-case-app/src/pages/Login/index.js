@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import axios from 'axios';
-import CryptoJS from 'crypto-js';
+import {userAuthentication} from '../../api/login';
 import './index.css';
 
 const Login = ({onSuccLogin}) => { 
@@ -9,14 +8,8 @@ const Login = ({onSuccLogin}) => {
 
    const handleSubmit = (event) => {
         event.preventDefault();
-        const apiURL = process.env.REACT_APP_API_URL;
-        const payload={
-            "email": username,
-            "password": password
-        }
 
-        const ciphertext = CryptoJS.AES.encrypt(JSON.stringify(payload), process.env.REACT_APP_SECRET).toString();
-        axios.post(`${apiURL}/login`, {ciphertext})
+        userAuthentication(username, password)
             .then(function (response) {
                 if(response.status === 200){
                     onSuccLogin(response.data);

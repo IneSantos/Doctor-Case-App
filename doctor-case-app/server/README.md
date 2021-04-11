@@ -19,7 +19,7 @@ The server can be access from anywhere, since it was a cors policy, provided by 
 In order to run this project there are 2 things you can't forget. First install all the dependencies, by runing npm install inside the server folder. Then add the <code>.env</code> file to the server folder. 
 And finally execute <code>npm start</code>
 
-### Code Splitting
+### Code Structure
 
 The code was splitted in 4 folders. 
 

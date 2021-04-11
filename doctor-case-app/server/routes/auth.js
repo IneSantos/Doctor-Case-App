@@ -13,10 +13,9 @@ router.post('/logout', function(req, res) {
 //LOGIN
 router.post('/', async (req, res) => {
     try {
-        var bytes  = CryptoJS.AES.decrypt(req.body.ciphertext, process.env.SECRET);
-        var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+        var password  = CryptoJS.SHA256(req.body.password, process.env.SECRET).toString();
+        const payload = {email: req.body.email, password: password};
         
-        const payload = {email: decryptedData.email, password: decryptedData.password};
         const user = await Users.findOne(payload);
         if (user) {
             const token = jwt.sign({ id: user._id }, process.env.SECRET, {

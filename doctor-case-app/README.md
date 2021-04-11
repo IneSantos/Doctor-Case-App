@@ -6,10 +6,6 @@ The frontend was developed using ReactJS. And it was initialized using [Create R
 
 In the project directory, you can run:
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `yarn start`
 
 Runs the app in the development mode.\

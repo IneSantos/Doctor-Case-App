@@ -13,6 +13,14 @@ router.get('/', verifyJWT, async (req, res) => {
     }
 });
 
+router.get('/allCases', async (req, res) => {
+    try {
+        const cases = await Case.find();
+        res.json(cases);
+    } catch(err){
+        res.status(500).json({message: err});
+    }
+});
 
 router.post('/', verifyJWT, async (req, res) => {
     const newCase = new Case({
