@@ -1,0 +1,17 @@
+.review-section {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+
+.case {
+    flex: 2;
+    margin: 16px;
+    padding: 8px;
+}
+
+.list-conditions {
+    flex: 1;
+    margin: 16px;
+    padding: 8px;
+}

@@ -2,8 +2,25 @@ ul {
     list-style-type: none;
     padding: 0;
     border: 1px solid black;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 300px;
 }
 
 li {
     padding: 6px;
+}
+
+li .selected {
+    padding: 6px;
+}
+
+
+li:hover
+{
+    background-color: lightgrey;
+}
+
+li:active {
+    background-color: grey;
 }

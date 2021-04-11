@@ -1,19 +1,18 @@
+import React from "react";
 import './index.css';
 
-const conditions = [{code:'F411', description: 'Generalized anxiety disorder' }];
+function Conditions ({conditions, onSelect, selectedCode}) {
 
-function Conditions () {
-    const selectCondition = () => {
-        console.log('selectCondition');
-    }
+    const condStyle = (code) => {return {backgroundColor: selectedCode === code ? "grey" : "none"}};
 
     return (
         <>
             <h3>Select Condition: </h3>
             <ul>
-                {conditions.map((cond, i) => (
-                    <li key={cond.code} onClick={selectCondition}>{ `${cond.description} ( ${cond.code} )` }</li>
-                ))}
+                {conditions.map(({code, description}, i) => (
+                        <li key={code} onClick={() => onSelect(code)} style={condStyle(code)}>{ `${description} ( ${code} )` }</li>
+                    )
+                )}
             </ul>
         </>
     );

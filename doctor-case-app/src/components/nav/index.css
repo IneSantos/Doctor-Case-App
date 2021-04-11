@@ -1,0 +1,11 @@
+ul.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 16px;
+    height: auto;
+    border: none;
+    overflow: auto;
+    list-style-type: none;
+    padding: 0;
+}
