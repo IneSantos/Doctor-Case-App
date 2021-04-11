@@ -6,7 +6,7 @@ All the case id, doctor id, label and time to label the are being recorded in a 
 
 ## Before we start
 
-This project was developed using <code>.env</code> configurations. So it's important that before we start we copy and past the <code>.env</code> files inside the server folder and the srv folder. 
+This project was developed using <code>.env</code> configurations. So it's important that before we start we copy and past the <code>.env</code> files inside the server folder and the src folder. 
 
 
 ## Project Structure
